@@ -1,17 +1,16 @@
 ﻿@model IEnumerable<IsabellaBirdBlog.Models.Location>
- 
-<html>
-<head>
-    <title>Locations</title>
-</head>
-<body>
-    <h2>Locations</h2>
-    <h4>@Html.DisplayNameFor(model => model.LocationName)</h4>
-    <ul>
-        @foreach (var listLocation in Model)
-        {
-            <li>@Html.DisplayFor(modelLocation => listLocation.LocationName)</li>
-        }
-    </ul>
-</body>
-</html>
+
+@{
+    ViewData["Title"] = "Isabella Bird Blog - New Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Locations</h2>
+<ul>
+    @foreach (var listLocation in Model)
+    {
+        <li>@Html.DisplayFor(modelLocation => listLocation.LocationName)</li>
+    }
+</ul>
+
+@Html.ActionLink("Add new Location", "Create")
