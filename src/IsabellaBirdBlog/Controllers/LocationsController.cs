@@ -71,5 +71,12 @@ namespace IsabellaBirdBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details(int id)
+        {
+            var thisLocation = db.Locations.FirstOrDefault(locations => locations.LocationId == id);
+            //ViewBag.Players = db.Players.Where(players => players.LocationId == id).ToList();
+            return View(thisLocation);
+        }
     }
 }
