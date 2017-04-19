@@ -8,7 +8,7 @@ using IsabellaBirdBlog.Models;
 namespace IsabellaBirdBlog.Migrations
 {
     [DbContext(typeof(IsabellaBirdBlogContext))]
-    [Migration("20170419171543_Initial")]
+    [Migration("20170419180147_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,7 +85,7 @@ namespace IsabellaBirdBlog.Migrations
 
                     b.HasIndex("PersonId2");
 
-                    b.ToTable("PersonExperience");
+                    b.ToTable("PersonsExperience");
                 });
 
             modelBuilder.Entity("IsabellaBirdBlog.Models.Experience", b =>

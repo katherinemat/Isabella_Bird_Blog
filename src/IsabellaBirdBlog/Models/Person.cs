@@ -12,8 +12,6 @@ namespace IsabellaBirdBlog.Models
         public int PersonId { get; set; }
         public string PersonName { get; set; }
         public virtual Location Location { get; set; }
-        //public virtual ICollection<Experience> Experiences { get; set; }
         public virtual ICollection<PersonExperience> PersonsExperiences { get; set; }
-        public IEnumerable<PersonExperience> PersonExperience { get; internal set; }
     }
 }

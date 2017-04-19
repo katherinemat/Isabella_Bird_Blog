@@ -8,9 +8,10 @@ using IsabellaBirdBlog.Models;
 namespace IsabellaBirdBlog.Migrations
 {
     [DbContext(typeof(IsabellaBirdBlogContext))]
-    partial class IsabellaBirdBlogContextModelSnapshot : ModelSnapshot
+    [Migration("20170419180624_Initial3")]
+    partial class Initial3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

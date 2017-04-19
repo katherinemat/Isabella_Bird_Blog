@@ -162,8 +162,10 @@
 --resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\obj\Debug\netcoreapp1.0\IsabellaBirdBlogdotnet-compile.deps.json",IsabellaBirdBlog.deps.json
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Program.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419171543_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419171543_Initial.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419180147_Initial.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419180147_Initial.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419180624_Initial3.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419180624_Initial3.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\IsabellaBirdBlogContextModelSnapshot.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Models\Experience.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Models\IsabellaBirdBlogContext.cs

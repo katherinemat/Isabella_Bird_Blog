@@ -65,7 +65,7 @@ namespace IsabellaBirdBlog.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PersonExperience",
+                name: "PersonsExperience",
                 columns: table => new
                 {
                     PersonId = table.Column<int>(nullable: false),
@@ -75,27 +75,27 @@ namespace IsabellaBirdBlog.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PersonExperience", x => new { x.PersonId, x.ExperienceId });
+                    table.PrimaryKey("PK_PersonsExperience", x => new { x.PersonId, x.ExperienceId });
                     table.ForeignKey(
-                        name: "FK_PersonExperience_Experiences_ExperienceId",
+                        name: "FK_PersonsExperience_Experiences_ExperienceId",
                         column: x => x.ExperienceId,
                         principalTable: "Experiences",
                         principalColumn: "ExperienceId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PersonExperience_Experiences_ExperienceId2",
+                        name: "FK_PersonsExperience_Experiences_ExperienceId2",
                         column: x => x.ExperienceId2,
                         principalTable: "Experiences",
                         principalColumn: "ExperienceId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PersonExperience_Persons_PersonId",
+                        name: "FK_PersonsExperience_Persons_PersonId",
                         column: x => x.PersonId,
                         principalTable: "Persons",
                         principalColumn: "PersonId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PersonExperience_Persons_PersonId2",
+                        name: "FK_PersonsExperience_Persons_PersonId2",
                         column: x => x.PersonId2,
                         principalTable: "Persons",
                         principalColumn: "PersonId",
@@ -113,30 +113,30 @@ namespace IsabellaBirdBlog.Migrations
                 column: "LocationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonExperience_ExperienceId",
-                table: "PersonExperience",
+                name: "IX_PersonsExperience_ExperienceId",
+                table: "PersonsExperience",
                 column: "ExperienceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonExperience_ExperienceId2",
-                table: "PersonExperience",
+                name: "IX_PersonsExperience_ExperienceId2",
+                table: "PersonsExperience",
                 column: "ExperienceId2");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonExperience_PersonId",
-                table: "PersonExperience",
+                name: "IX_PersonsExperience_PersonId",
+                table: "PersonsExperience",
                 column: "PersonId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonExperience_PersonId2",
-                table: "PersonExperience",
+                name: "IX_PersonsExperience_PersonId2",
+                table: "PersonsExperience",
                 column: "PersonId2");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PersonExperience");
+                name: "PersonsExperience");
 
             migrationBuilder.DropTable(
                 name: "Experiences");

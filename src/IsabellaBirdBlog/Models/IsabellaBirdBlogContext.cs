@@ -15,6 +15,7 @@ namespace IsabellaBirdBlog.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<PersonExperience> PersonsExperience { get;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -28,20 +29,10 @@ namespace IsabellaBirdBlog.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<PersonExperience>()
            .HasKey(t => new { t.PersonId, t.ExperienceId });
-
-            modelBuilder.Entity<PersonExperience>()
-                .HasOne(pt => pt.Person)
-                .WithMany(p => p.PersonExperience)
-                .HasForeignKey(pt => pt.PersonId);
-
-            modelBuilder.Entity<PersonExperience>()
-                .HasOne(pt => pt.Experience)
-                .WithMany(t => t.PersonExperience)
-                .HasForeignKey(pt => pt.ExperienceId);
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }
