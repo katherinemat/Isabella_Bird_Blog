@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using IsabellaBirdBlog.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace IsabellaBirdBlog.Controllers
 {
@@ -19,10 +20,10 @@ namespace IsabellaBirdBlog.Controllers
         public IActionResult Create()
         {
             List<SelectListItem> geoclasses = new List<SelectListItem>();
-            geoclasses.Add(new SelectListItem { Text = "City", Value = "City" });
-            geoclasses.Add(new SelectListItem { Text = "Country", Value = "Country" });
-            geoclasses.Add(new SelectListItem { Text = "Landmark", Value = "Landmark" });
-            geoclasses.Add(new SelectListItem { Text = "Region", Value = "Region" });
+            geoclasses.Add(new SelectListItem() { Text = "City", Value = "City" });
+            geoclasses.Add(new SelectListItem() { Text = "Country", Value = "Country" });
+            geoclasses.Add(new SelectListItem() { Text = "Landmark", Value = "Landmark" });
+            geoclasses.Add(new SelectListItem() { Text = "Region", Value = "Region" });
             ViewBag.Geoclasses = geoclasses;
             return View();
         }
@@ -31,6 +32,27 @@ namespace IsabellaBirdBlog.Controllers
         public IActionResult Create(Location location)
         {
             db.Locations.Add(location);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            List<SelectListItem> geoclasses = new List<SelectListItem>();
+            geoclasses.Add(new SelectListItem() { Text = "City", Value = "City" });
+            geoclasses.Add(new SelectListItem() { Text = "Country", Value = "Country" });
+            geoclasses.Add(new SelectListItem() { Text = "Landmark", Value = "Landmark" });
+            geoclasses.Add(new SelectListItem() { Text = "Region", Value = "Region" });
+            ViewBag.Geoclasses = geoclasses;
+
+            var thisLocation = db.Locations.FirstOrDefault(locations => locations.LocationId == id);
+            return View(thisLocation);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Location location)
+        {
+            db.Entry(location).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
