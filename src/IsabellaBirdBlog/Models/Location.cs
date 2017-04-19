@@ -10,9 +10,15 @@ namespace IsabellaBirdBlog.Models
     {
         [Key]
         public int LocationId { get; set; }
+
+        [Required]
         public string LocationName { get; set; }
+
+        [Required]
         public string GeoClass { get; set; }
+
         public virtual ICollection<Experience> Experiences { get; set; }
+
         public virtual ICollection<Person> Persons { get; set; }
     }
 }

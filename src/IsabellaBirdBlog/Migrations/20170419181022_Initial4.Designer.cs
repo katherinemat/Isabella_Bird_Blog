@@ -8,9 +8,10 @@ using IsabellaBirdBlog.Models;
 namespace IsabellaBirdBlog.Migrations
 {
     [DbContext(typeof(IsabellaBirdBlogContext))]
-    partial class IsabellaBirdBlogContextModelSnapshot : ModelSnapshot
+    [Migration("20170419181022_Initial4")]
+    partial class Initial4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -21,11 +22,9 @@ namespace IsabellaBirdBlog.Migrations
                     b.Property<int>("ExperienceId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ExperienceDesc")
-                        .IsRequired();
+                    b.Property<string>("ExperienceDesc");
 
-                    b.Property<string>("ExperienceName")
-                        .IsRequired();
+                    b.Property<string>("ExperienceName");
 
                     b.Property<int?>("LocationId");
 
@@ -41,11 +40,9 @@ namespace IsabellaBirdBlog.Migrations
                     b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("GeoClass")
-                        .IsRequired();
+                    b.Property<string>("GeoClass");
 
-                    b.Property<string>("LocationName")
-                        .IsRequired();
+                    b.Property<string>("LocationName");
 
                     b.HasKey("LocationId");
 
