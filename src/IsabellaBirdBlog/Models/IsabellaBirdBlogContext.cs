@@ -15,7 +15,7 @@ namespace IsabellaBirdBlog.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<PersonExperience> PersonsExperience { get;}
+        public DbSet<PersonExperience> PersonsExperiences { get;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

@@ -81,7 +81,7 @@ namespace IsabellaBirdBlog.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("PersonsExperience");
+                    b.ToTable("PersonsExperiences");
                 });
 
             modelBuilder.Entity("IsabellaBirdBlog.Models.Experience", b =>

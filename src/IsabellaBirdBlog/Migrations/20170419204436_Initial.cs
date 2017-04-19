@@ -15,8 +15,8 @@ namespace IsabellaBirdBlog.Migrations
                 {
                     LocationId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    GeoClass = table.Column<string>(nullable: true),
-                    LocationName = table.Column<string>(nullable: true)
+                    GeoClass = table.Column<string>(nullable: false),
+                    LocationName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,8 +29,8 @@ namespace IsabellaBirdBlog.Migrations
                 {
                     ExperienceId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ExperienceDesc = table.Column<string>(nullable: true),
-                    ExperienceName = table.Column<string>(nullable: true),
+                    ExperienceDesc = table.Column<string>(nullable: false),
+                    ExperienceName = table.Column<string>(nullable: false),
                     LocationId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -51,7 +51,7 @@ namespace IsabellaBirdBlog.Migrations
                     PersonId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     LocationId = table.Column<int>(nullable: true),
-                    PersonName = table.Column<string>(nullable: true)
+                    PersonName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,41 +65,27 @@ namespace IsabellaBirdBlog.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PersonsExperience",
+                name: "PersonsExperiences",
                 columns: table => new
                 {
                     PersonId = table.Column<int>(nullable: false),
-                    ExperienceId = table.Column<int>(nullable: false),
-                    ExperienceId2 = table.Column<int>(nullable: true),
-                    PersonId2 = table.Column<int>(nullable: true)
+                    ExperienceId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PersonsExperience", x => new { x.PersonId, x.ExperienceId });
+                    table.PrimaryKey("PK_PersonsExperiences", x => new { x.PersonId, x.ExperienceId });
                     table.ForeignKey(
-                        name: "FK_PersonsExperience_Experiences_ExperienceId",
+                        name: "FK_PersonsExperiences_Experiences_ExperienceId",
                         column: x => x.ExperienceId,
                         principalTable: "Experiences",
                         principalColumn: "ExperienceId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PersonsExperience_Experiences_ExperienceId2",
-                        column: x => x.ExperienceId2,
-                        principalTable: "Experiences",
-                        principalColumn: "ExperienceId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_PersonsExperience_Persons_PersonId",
+                        name: "FK_PersonsExperiences_Persons_PersonId",
                         column: x => x.PersonId,
                         principalTable: "Persons",
                         principalColumn: "PersonId",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PersonsExperience_Persons_PersonId2",
-                        column: x => x.PersonId2,
-                        principalTable: "Persons",
-                        principalColumn: "PersonId",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -113,30 +99,20 @@ namespace IsabellaBirdBlog.Migrations
                 column: "LocationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonsExperience_ExperienceId",
-                table: "PersonsExperience",
+                name: "IX_PersonsExperiences_ExperienceId",
+                table: "PersonsExperiences",
                 column: "ExperienceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonsExperience_ExperienceId2",
-                table: "PersonsExperience",
-                column: "ExperienceId2");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PersonsExperience_PersonId",
-                table: "PersonsExperience",
+                name: "IX_PersonsExperiences_PersonId",
+                table: "PersonsExperiences",
                 column: "PersonId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PersonsExperience_PersonId2",
-                table: "PersonsExperience",
-                column: "PersonId2");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PersonsExperience");
+                name: "PersonsExperiences");
 
             migrationBuilder.DropTable(
                 name: "Experiences");

@@ -26,6 +26,8 @@ namespace IsabellaBirdBlog
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             services.AddEntityFramework()
                 .AddDbContext<IsabellaBirdBlogContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
@@ -33,7 +35,12 @@ namespace IsabellaBirdBlog
 
         public void Configure(IApplicationBuilder app)
         {
-
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.Run(async (context) =>
             {
