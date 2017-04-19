@@ -26,22 +26,9 @@ namespace IsabellaBirdBlog.Models
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PersonsExperiences>()
-           .HasKey(t => new { t.PersonId, t.ExperienceId });
-
-            modelBuilder.Entity<PersonsExperiences>()
-                .HasOne(pt => pt.Person)
-                .WithMany(p => p.PersonsExperiencess)
-                .HasForeignKey(pt => pt.PersonId);
-
-            modelBuilder.Entity<PersonsExperiences>()
-                .HasOne(pt => pt.Experience)
-                .WithMany(t => t.PersonsExperiencess)
-                .HasForeignKey(pt => pt.ExperienceId);
-
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
