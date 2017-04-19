@@ -197,12 +197,11 @@
 --resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\obj\Debug\netcoreapp1.0\IsabellaBirdBlogdotnet-compile.deps.json",IsabellaBirdBlog.deps.json
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Program.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Startup.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Controllers\ExperiencesController.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Controllers\HomeController.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Controllers\LocationsController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419204436_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419204436_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419212002_LongerDesc.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419212002_LongerDesc.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419230929_Initial.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\20170419230929_Initial.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Migrations\IsabellaBirdBlogContextModelSnapshot.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Models\Experience.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\IsabellaBirdBlog\src\IsabellaBirdBlog\Models\IsabellaBirdBlogContext.cs

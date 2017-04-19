@@ -19,6 +19,8 @@ namespace IsabellaBirdBlog.Models
         [Column(TypeName = "varchar(MAX)")]
         public string ExperienceDesc { get; set; }
 
+        public int LocationId { get; set; }
+
         public virtual Location Location { get; set; }
 
         public virtual ICollection<PersonExperience> PersonsExperiences { get; set; }

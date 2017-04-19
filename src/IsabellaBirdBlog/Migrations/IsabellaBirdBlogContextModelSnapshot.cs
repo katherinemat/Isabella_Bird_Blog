@@ -28,7 +28,7 @@ namespace IsabellaBirdBlog.Migrations
                     b.Property<string>("ExperienceName")
                         .IsRequired();
 
-                    b.Property<int?>("LocationId");
+                    b.Property<int>("LocationId");
 
                     b.HasKey("ExperienceId");
 
@@ -89,7 +89,8 @@ namespace IsabellaBirdBlog.Migrations
                 {
                     b.HasOne("IsabellaBirdBlog.Models.Location", "Location")
                         .WithMany("Experiences")
-                        .HasForeignKey("LocationId");
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("IsabellaBirdBlog.Models.Person", b =>

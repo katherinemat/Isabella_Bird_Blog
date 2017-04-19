@@ -29,9 +29,9 @@ namespace IsabellaBirdBlog.Migrations
                 {
                     ExperienceId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ExperienceDesc = table.Column<string>(nullable: false),
+                    ExperienceDesc = table.Column<string>(type: "varchar(MAX)", nullable: false),
                     ExperienceName = table.Column<string>(nullable: false),
-                    LocationId = table.Column<int>(nullable: true)
+                    LocationId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,7 +41,7 @@ namespace IsabellaBirdBlog.Migrations
                         column: x => x.LocationId,
                         principalTable: "Locations",
                         principalColumn: "LocationId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

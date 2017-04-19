@@ -8,8 +8,8 @@ using IsabellaBirdBlog.Models;
 namespace IsabellaBirdBlog.Migrations
 {
     [DbContext(typeof(IsabellaBirdBlogContext))]
-    [Migration("20170419212002_LongerDesc")]
-    partial class LongerDesc
+    [Migration("20170419230929_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,7 +29,7 @@ namespace IsabellaBirdBlog.Migrations
                     b.Property<string>("ExperienceName")
                         .IsRequired();
 
-                    b.Property<int?>("LocationId");
+                    b.Property<int>("LocationId");
 
                     b.HasKey("ExperienceId");
 
@@ -90,7 +90,8 @@ namespace IsabellaBirdBlog.Migrations
                 {
                     b.HasOne("IsabellaBirdBlog.Models.Location", "Location")
                         .WithMany("Experiences")
-                        .HasForeignKey("LocationId");
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("IsabellaBirdBlog.Models.Person", b =>
