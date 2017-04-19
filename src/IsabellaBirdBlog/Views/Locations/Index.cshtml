@@ -6,11 +6,25 @@
 }
 
 <h2>Locations</h2>
-<ul>
+
+<table class="table">
+
     @foreach (var listLocation in Model)
     {
-        <li>@Html.DisplayFor(modelLocation => listLocation.LocationName)</li>
+        <tr>
+            <td>
+                @listLocation.LocationName
+            </td>
+            <td>
+                @listLocation.GeoClass
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = listLocation.LocationId}) | 
+                @Html.ActionLink("Edit", "EditPlayer", new { id = listLocation.LocationId }) |
+                @Html.ActionLink("Delete", "DeletePlayer", new { id = listLocation.LocationId })
+            </td>
+        </tr>
     }
-</ul>
+</table>
 
 @Html.ActionLink("Add new Location", "Create")
