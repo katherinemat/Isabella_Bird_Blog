@@ -13,6 +13,8 @@ namespace IsabellaBirdBlog.Models
         public string ExperienceName { get; set; }
         public string ExperienceDesc { get; set; }
         public virtual Location Location { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
+        //public virtual ICollection<Person> Persons { get; set; }
+        public virtual ICollection<PersonExperience> PersonsExperiences { get; set; }
+        public IEnumerable<PersonExperience> PersonExperience { get; internal set; }
     }
 }
