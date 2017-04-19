@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25E54D59-9775-4A60-9825-B5EC7943B183}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4993D2BD-BE76-4724-9CBD-DA3C17E94EA4}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IsabellaBirdBlog", "src\IsabellaBirdBlog\IsabellaBirdBlog.xproj", "{32B9EAD6-BBFA-4410-8760-627317106E30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32B9EAD6-BBFA-4410-8760-627317106E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B9EAD6-BBFA-4410-8760-627317106E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B9EAD6-BBFA-4410-8760-627317106E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B9EAD6-BBFA-4410-8760-627317106E30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32B9EAD6-BBFA-4410-8760-627317106E30} = {25E54D59-9775-4A60-9825-B5EC7943B183}
+	EndGlobalSection
+EndGlobal
